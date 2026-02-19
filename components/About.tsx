@@ -1,5 +1,7 @@
 
 import React from 'react';
+import a1 from '../src/assets/a1.jpg';
+import a2 from '../src/assets/a2.jpg';
 
 const About: React.FC = () => {
   return (
@@ -9,13 +11,11 @@ const About: React.FC = () => {
           <div className="order-2 md:order-1 relative">
             <div className="grid grid-cols-2 gap-4">
               <img 
-                src="images\a2.jpg"
-                alt="Premium silk fabrics"
+                src={a1}
                 className="rounded-lg shadow-md mt-8 h-64 w-full object-cover"
               />
               <img 
-                src="images\a1.jpg"
-                alt="Detailed stitching process"
+                src={a2}
                 className="rounded-lg shadow-md h-64 w-full object-cover"
               />
             </div>

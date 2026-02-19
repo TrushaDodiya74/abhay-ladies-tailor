@@ -1,13 +1,20 @@
 
 import React, { useState } from 'react';
+import b1 from '../src/assets/b1.jpeg';
+import b2 from '../src/assets/b2.jpeg';
+import s1 from '../src/assets/s1.jpeg';
+import s2 from '../src/assets/s2.jpeg';
+import k1 from '../src/assets/k1.jpeg';
+import k2 from '../src/assets/k2.jpeg';
+
 
 const galleryItems = [
-  { id: 1, title: 'Royal Bridal Blouse Design', category: 'Blouse', url: '/images/img1.JPG' },
-  { id: 2, title: 'Contemporary Designer Sleeve', category: 'Sleeve', url: '/images/img3.JPG' },
-  { id: 3, title: 'Office Wear Straight Kurti', category: 'Kurti', url: '/images/img4.JPG' },
-  { id: 4, title: 'Designer Front Neck Detail', category: 'Blouse', url: '/images/img6.JPG' },
-  { id: 5, title: 'Designer Frill Sleeve Style', category: 'Sleeve', url: '/images/img7.JPG' },
-  { id: 6, title: 'Elegant Floral Kurti Stitching', category: 'Kurti', url: '/images/img5.JPG' },
+  { id: 1, title: 'Royal Bridal Blouse Design', category: 'Blouse', src: b1 },
+  { id: 2, title: 'Contemporary Designer Sleeve', category: 'Sleeve', src: s1 },
+  { id: 3, title: 'Office Wear Straight Kurti', category: 'Kurti', src: k1 },
+  { id: 4, title: 'Designer Front Neck Detail', category: 'Blouse', src: b2 },
+  { id: 5, title: 'Designer Frill Sleeve Style', category: 'Sleeve', src: s2 },
+  { id: 6, title: 'Elegant Floral Kurti Stitching', category: 'Kurti', src: k2 },
 ];
 
 const Gallery: React.FC = () => {
@@ -45,7 +52,7 @@ const Gallery: React.FC = () => {
           {filteredItems.map(item => (
             <div key={item.id} className="relative overflow-hidden group aspect-square rounded-sm shadow-sm border border-peach-100">
               <img 
-                src={item.url} 
+                src={item.src} 
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
